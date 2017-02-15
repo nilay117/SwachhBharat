@@ -221,6 +221,7 @@ body{
 	color: #222222;
 	font-size: 150%;
 	margin-top: 2%;
+	margin-bottom: 0.7%;
 	z-index: 5;
 	margin-left: 10%;
 }
@@ -231,7 +232,7 @@ body{
 	position: relative;
 	left:10%;
 	z-index: 3;
-	margin-bottom: 1%;
+	margin-bottom: 0.7%;
 	color: #222222;
 	font-weight: 300;
 	font-style: italic;
@@ -254,6 +255,7 @@ body{
 .main-content p.a{
 	text-align: left;
 	color: #222222;
+	margin-top:1%;
 	padding-bottom: 1%;
 	border-bottom:1px solid #222222;	 
 }
@@ -397,10 +399,7 @@ form p{
 
 }
 .button{
-	position: relative;
-	left:-5%;
 	display: flex;
-	width: 10%;
 	flex-direction: row;
 }
 .next{
@@ -408,22 +407,21 @@ form p{
 	color: #222222;
 	padding: 5%;
 	cursor: pointer;
-	padding-left: 20%;
-	padding-right: 20%;
+	width: 100%;
+	padding-left: 10%;
+	padding-right: 10%;
 	margin-left: 10%;
 
 }
 .prev{
+	width: 100%;
 	border:2px solid #b78832;
 	color: #222222;
 	padding: 5%;
 	cursor:pointer; 
-	padding-left: 20%;
-	padding-right: 20%; 
+	padding-left: 10%;
+	padding-right: 10%; 
 
-}
-input[type=submit]:hover{
-	box-shadow: 1px 1px 5px #000000;
 }
 @media screen and (max-width : 1200px) {
 	.nav ul{
@@ -511,4 +509,7 @@ input[type=submit]:hover{
     .main-content h1{
     	top: 8%;
     }
+}
+.app a:hover{
+		box-shadow: 1px 1px 5px #000000;
 }
