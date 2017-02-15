@@ -7,21 +7,10 @@
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 </head>
 <body>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$(document).on('click',".hamburger.menu-closed",function(){
-				$(".mob-nav").animate({right:"0%"},1000);
-				// $(".mob-nav").fadeIn(1000);
-				$(this).removeClass('menu-closed').addClass('menu-open');	
-			})
+	
+	<img src ="images/IMG02.jpg" id="first" style="z-index:2;position:absolute;top:10%;width:100vw;height:90%;left:0%;" />
 
-			$(document).on('click',".hamburger.menu-open",function(){
-					$(".mob-nav").animate({right:"-45%"},1000);
-					// $(".mob-nav").fadeOut(1000);
-					$(this).removeClass('menu-open').addClass('menu-closed');
-			})
-		})
-	</script>
+	<img src ="images/IMG03.jpg" id="second" style="z-index:1;position:absolute;top:10%;width:100vw;height:90%;left:0%;" />
 	<div class="hamburger menu-closed"><img src = "images/hamburger.png"></div>
 	<div class="nav">
 	<div class="logo-wrapper">
@@ -35,7 +24,7 @@
 			<li><a href="about.html">ABOUT</a> </li>
 			<li><a href="#">VISION </a></li>
 			<li><a href="#">GALLERY</a> </li>
-			<li><a href="#">UPDATES </a></li>
+			<li><a href="updates.html">UPDATES </a></li>
 			<li><a href="#">MENTORS </a></li>
 			<li><a href="#">PRERAKS </a></li>
 			<li><a href="#">CONTACT US</a></li>
@@ -47,26 +36,53 @@
 			<li><a href="about.html">ABOUT</a> </li>
 			<li><a href="#">VISION </a></li>
 			<li><a href="#">GALLERY</a> </li>
-			<li><a href="#">UPDATES </a></li>
+			<li><a href="updates.html">UPDATES </a></li>
 			<li><a href="#">MENTORS </a></li>
 			<li><a href="#">PRERAKS </a></li>
 			<li><a href="#">CONTACT US</a></li>
 		</ul>
 	</div>
 	<div class="main-content">
-		<div class="wrapper"></div>
-		<div class ="heading">
+				<div class ="heading">
 			LOREM IPSUM DOLOR SIT AMET
 		</div>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
 		<div class="button">
-				<a href="#">APPLY AS A PRERAK
+				<a href="preapply.html">APPLY AS A PRERAK
 				<div class="underline"></div></a>
 		</div>
 	</div>
 	<div class = "footer">
 		<img src ="images/logo1.png"/><p>Designed at <span style="color:#b78832">Green Botal Studios</span></p>		
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('click',".hamburger.menu-closed",function(){
+				$(".mob-nav").animate({right:"0%"},1000);
+				// $(".mob-nav").fadeIn(1000);
+				$(this).removeClass('menu-closed').addClass('menu-open');	
+			})
+
+			$(document).on('click',".hamburger.menu-open",function(){
+					$(".mob-nav").animate({right:"-45%"},1000);
+					// $(".mob-nav").fadeOut(1000);
+					$(this).removeClass('menu-open').addClass('menu-closed');
+			})
+		
+		})
+		setInterval(function(){
+		$("#first").fadeOut(2000,function(){
+			$("#first").css({"z-index":1});
+			$("#second").css({"z-index":2}).delay(1000);
+			$("#first").fadeIn(10);			
+			$("#second").fadeOut(2000,function(){
+				$("#first").css({"z-index":2});
+				$("#second").css({"z-index":1}).delay(1000);
+				$("#second").fadeIn(10);
+			})
+		})
+		},6000);
+	</script>
 </body>
 </html>

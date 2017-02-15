@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apply as a prerak</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+</head>
+<body >
+	<div class="wrapper" style="display:flex;align-items:center;flex-direction:column">
+ 	<span style=" text-align:center; font-size:200%; font-family:'Roboto';color:#b78832;border-bottom:4px solid #ffffff">
+ 	Apply as a Prerak
+ 	</span>
+ 	<form>
+ 	<div class="form1 form">
+ 		<div class="section" >
+ 			Personal Information
+ 		</div>
+ 		<!-- <label><br></label> -->
+ 		<input type="text" name="fullname" placeholder="Full Name" required><br>
+ 	
+ 		<!-- <label><span style="color:red">*</span></label> -->
+ 		<input type="text" name="email" placeholder="Email ID" required><br>
+ 	
+ 		<!-- <label><span style="color:red">*</span></label> -->
+
+ 		<input type="text" name="mobile" placeholder="Mobile Number" required><br>
+ 	
+ 		<p>Date of Birth</p>
+ 		<input type="date" name="dob" placeholder="Your answer" required><br>
+
+ 		<p>Gender</p>
+ 		<input type="radio" style="margin-bottom:1%;" name="gender" value="male" checked><p style="display:inline"> Male<br></p>
+  		<input type="radio" style="margin-bottom:1%;" name="gender" value="female"><p style="display:inline"> Female<br></p>
+  		<input type="radio" name="gender" value="other"><p style="display:inline"> Other: </p>
+  		<input type="text" name="gender_other" style="width:50%;"><br>
+
+  		<!-- <label><span style="color:red">*</span><br></label> -->
+  		
+ 		<input type="text" name="language" placeholder="Languages Spoken" required><br>
+ 		
+ 	</div>
+ 		
+ 	<div class="form2 form">
+ 		<div class="section">
+ 			Educational Qualifications
+ 		</div>
+ 		<!-- <label><span style="color:red">*</span><br></label> -->
+ 		<p>Please write the full name of the undergraduate degree you received along with the name of the Institute (Example: BA (Honors) in Economics, Hansraj College, Delhi University).Enter NA if not applicable.</p>
+ 		<input type="text" name="undergrad" placeholder="Undergraduate Education" required><br>
+ 	
+ 		<!-- <label><span style="color:red">*</span></label> -->
+ 		<p>Please write the full name of the post-graduate degree(s) you received along with the name of the Institute (Example: MA in Development Studies, Tata Institute of Social Sciences, Mumbai)
+ 		Enter NA if not applicable.</p>
+ 		<input type="text" name="postgrad" placeholder="Post Graduate Education" required><br> 
+ 	
+ 		<!-- <label> <span style="color:red">*</span></label> -->
+ 		<p>Please write the full name of any certificate programs or diploma programs that you have undertaken along with the name of the Institute (Example: Certificate in Data Analytics, Indira Gandhi open National University).Enter NA if not applicable.</p>
+ 		<input type="text" name="additional_ed" placeholder="Additional Diploma or Certificate Programs" required><br>
+ 	</div>
+ 	<div class="form3 form">
+ 		<div class="section">
+ 			Work Experience
+ 		</div>
+
+ 		<!-- <label> <span style="color:red">*</span><br></label> -->
+  		<p>Please write the name of the latest organisation you worked with, along with the year of service (Example: Teach for India, 2010-12).Write NA if not applicable.</p>
+ 		<input type="text" name="language" placeholder="Name of the Organisation" required><br>
+
+ 		<!-- <label> <span style="color:red">*</span><br></label> -->
+  		<p>Please write your designation in the above organisation.Write NA if not applicable.</p>
+ 		<input type="text" name="language" placeholder="Designation" required><br>
+
+ 		<!-- <label> <span style="color:red">*</span><br></label> -->
+ 		<p> Please write the number of months served in the above organisation.Write NA if not applicable.</p>
+ 		<input type="text" name="language" placeholder="Number of months served" required><br></p>
+
+ 		<!-- <label> <span style="color:red">*</span><br></label> -->
+  		<p>Please describe in detail the work undertaken by you in the above role and organisation.Write NA if not applicable.</p>
+ 		<input type="text" name="language" placeholder="Work Description" required><br>
+
+ 		<!-- <label> <span style="color:red">*</span><br></label> -->
+  		<p>Please write the name of the second organisation you worked with, along with the year of service (Example: Teach for India, 2010-12).Write NA if not applicable.</p>
+ 		<input type="text" name="language" placeholder="Name of the Organisation(2)" required><br>
+
+ 		<!-- <label> <span style="color:red">*</span><br></label> -->
+  		<p>Please write your designation in the above organisation.Write NA if not applicable.</p>
+ 		<input type="text" name="language" placeholder="Designation" required><br>
+
+ 		<!-- <label> <span style="color:red">*</span><br></label> -->
+ 		<p> Please write the number of months served in the above organisation.Write NA if not applicable.</p>
+ 		<input type="text" name="language" placeholder="Number of months served" required><br>
+
+ 		<!-- <label> <span style="color:red">*</span><br></label> -->
+  		<p>Please describe in detail the work undertaken by you in the above role and organisation.Write NA if not applicable.</p>
+ 		<input type="text" name="language" placeholder="Work Description" required><br>
+ 	</div>
+ 	<div class="form4 form">
+ 		<div class="section">
+ 			Swachh Bharat (Gramin) Analysis
+ 		</div>
+		<label>Which of the following states are you keen to be a Swachh Bharat Fellow in? (States marked with ** are priority areas)<br></label>
+		<p>Current recruitment of Swachh Bharat Fellows is for the following states only. Recruitment for UTs will be done subsequently.</p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Uttar Pradesh**<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Odisha**<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Bihar**<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Rajasthan**<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Madhya Pradesh**<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Jharkhand**<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Arunachal Pradesh**<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Assam<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Chattisgarh<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Goa<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Haryana<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Jammu And Kashmir<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Karnataka<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Manipur<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Maharastra<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Meghalaya<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Punjab<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Tamil Nadu<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Telangana<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Tripura<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Uttarakhand<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">West Bengal<br>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Lakshadweep Islands<br></p>
+		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Andhra Pradesh<br></p>
+		<input type="radio"  name="state_fellow"><p style="display:inline">Andaman & Nicobar Islands<br></p>
+
+		<label>Identify 4 challenges that the state of your preference faces in the effective implementation of Swachh Bharat Mission  <br></label>
+ 		<p> Please identify and clearly articulate 4 challenges that the state of your preference faces in the effective implementation of Swachh Bharat Mission. Please be concise and relevant in your responses.</p>
+ 		<input type="text" name="language" placeholder="Your answer" required><br>
+
+ 		<label>Recommend 4 clear actionable solutions that the state of your preference can adopt for the effective implementation of Swachh Bharat Mission  <br></label>
+ 		<p> Please identify and clearly articulate 4 actionable solutions that the state of your preference faces in the effective implementation of Swachh Bharat Mission. Please be concise and relevant in your responses.</p>
+ 		<input type="text" name="language" placeholder="Your answer" required><br>
+ 	</div>
+ 	<div class="form5 form">
+ 		<div class="section">
+ 			Declarations
+ 		</div>
+
+ 		<input type="checkbox" name="" style="margin-bottom:0%;">
+ 		<p style="display:inline">I understand that if selected, I will be required to join the Swachh Bharat Fellowship within one month of the offer letter.<br><br><br></p>
+
+ 		<input type="checkbox" name="" style="margin-bottom:0%;">
+ 		<p style="display:inline">I understand that once selected for the Swachh Bharat Fellowship, I will be required to move to the state and district alloted to me and undertake the fellowship as a residential fellowship for 12 months <br><br><br></p>
+
+ 		<input type="checkbox" name="" style="margin-bottom:0%;">
+ 		<p style="display:inline">I understand that once selected for the Swachh Bharat Fellowship, I am expected to complete the full tenure of 12 months at the allotted district and failure to do so will result in non-issuance of any certificate from the employer<span style="color:red;">*</span><br><br><br></p>
+
+ 		<input type="checkbox" name="" style="margin-bottom:0%;">
+ 		<p style="display:inline">The above information in the application form is correct and to the best of my knowledge.<span style="color:red;">*</span><br><br><br></p>
+
+ 		<input type="submit" name="" value="SUMBIT" style="position:absolute;top:102%;font-size:100%;padding:1%;margin-left:20%;border:none;border:2px solid #b78832;color: #b78832;;padding-left:6%;padding-right:6%">
+	</div>
+
+ 	</form>
+ 	<div class="button"> 	
+ 		<div class="prev">Previous</div>
+	 	<div class="next">Next</div>
+	 </div>
+ 	</div>
+ 	<script type="text/javascript"> 
+ 	 	$(".form").hide();
+ 	 	var x = 1;
+ 	 	var form = ".form" + x;
+ 	 	if(x == 1){
+			$(".prev").hide();
+		}
+ 	 	$(form).show();
+		$(".next").click(function(){
+			window.scrollTo(0,0);
+			$(form).hide();
+			x++;
+			$(".prev").show();
+			if(x == 5){
+				$(".next").hide();
+			}
+			if(x == 1){
+				$(".prev").show();
+			}
+			form = ".form" + x;
+			$(form).show();
+		})
+		$(".prev").click(function(){
+			window.scrollTo(0,0);
+			$(form).hide();
+			if(x == 5){
+				$(".next").show();
+			}
+			if(x == 2){
+				$(".prev").hide();
+			}
+			x--;
+			form = ".form" + x;
+			$(form).show();
+		})
+	</script>
+
+</body>
+</html>
