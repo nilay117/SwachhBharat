@@ -78,7 +78,7 @@ body{
 }
 .hamburger {
 	display: none;
-	position: absolute;
+	position: fixed;
 	top:1%;
 	z-index: 11;
 	right: 1%;
@@ -131,14 +131,19 @@ body{
 .nav .head{
 	margin-left: 2%;
 	font-size: 120%;
+	font-weight: bold;
 	font-family: 'Roboto'; 
 	color: #b78832;
 }
 .nav ul{
 	position: absolute;
-	right:0%;
-	width: 48%;
-	top:7.5%;
+	top: 0%;
+	right: 4%;
+	width: 42%;
+	margin: 0%;
+	height: inherit;
+	display: flex;
+	align-items: center;
 	list-style-type: none;
 }
 
@@ -328,19 +333,18 @@ body{
 	color: #7d7f82;
 }
 .footer p{
-	margin-left:0.5%;
+	margin-left:15px;
 	z-index: 5;
 	width: auto;
-	height: 5%;
-	margin-top:2.5%;
+	margin-top:35px;
 	font-size:10px;   
 }
 
 .footer img{
 	z-index: 5;
-	margin-left:0.5%; 
+	margin-left:10px; 
 	min-width: 8px;
-	margin-top:0.8%; 
+	margin-top:10px; 
 	height: 60%;
 	width: 0.8%;
 }
@@ -421,27 +425,29 @@ form p{
 }
 .button{
 	display: flex;
+	justify-content: center;
 	flex-direction: row;
+	margin-top:0%; 
+	width: 100%
 }
 .next{
 	border:2px solid #b78832;
 	color: #222222;
-	padding: 5%;
+	padding: 10px;
 	cursor: pointer;
-	width: 100%;
-	padding-left: 10%;
-	padding-right: 10%;
-	margin-left: 10%;
-
+	width: auto;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-left: 20px; 
 }
 .prev{
-	width: 100%;
+	width: auto;
 	border:2px solid #b78832;
 	color: #222222;
-	padding: 5%;
+	padding: 10px;
 	cursor:pointer; 
-	padding-left: 10%;
-	padding-right: 10%; 
+	padding-left: 40px;
+	padding-right: 40px; 
 
 }
 @media screen and (max-width : 1200px) {
