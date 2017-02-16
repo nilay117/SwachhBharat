@@ -1,37 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SwachhBharat</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$(document).on('click',".hamburger.menu-closed",function(){
+			$(document).on('click',".hamburger",function(){
 				$(".mob-nav").animate({right:"0%"},1000);
-				// $(".mob-nav").fadeIn(1000);
-				$(this).removeClass('menu-closed').addClass('menu-open');	
 			})
 
-			$(document).on('click',".hamburger.menu-open",function(){
+			$(document).on('click',".cross",function(){
 					$(".mob-nav").animate({right:"-45%"},1000);
-					// $(".mob-nav").fadeOut(1000);
-					$(this).removeClass('menu-open').addClass('menu-closed');
 			})
 
 		})
 	</script>
-	<div class="hamburger menu-closed"><img src = "images/hamburger.png"></div>
+	
 	<div class="nav">
 	<div class="logo-wrapper">
-		<div class ="logo">
-			<a href="index.html"><img src="images/logo.png" /></a>
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png"></a>
 		</div>
-		<div class ="head"> <a href ="index.html">ZILA SWACHH BHARAT PRERAK </a></div>
+		<div class="head"> <a href="index.html">ZILA SWACHH BHARAT PRERAK </a></div>
 		<ul>
-			<li ><a href ="index.html">HOME </a></li>
+			<li><a href="index.html">HOME </a></li>
 			<li class="active"><a href="about.html">ABOUT</a> </li>
 			<li><a href="#">VISION </a></li>
 			<li><a href="#">GALLERY</a> </li>
@@ -41,10 +36,11 @@
 			<li><a href="#">CONTACT US</a></li>
 		</ul>
 	</div>	
-	</div>
-	<div class ="mob-nav">
+	<div class="hamburger"><img src="images/hamburger.png"></div></div>
+	<div class="mob-nav">
+		<img class ="cross" src="images/cross.svg" style="position:absolute;z-index:3;right:1%;top:1%;width:60px;height:60px " />
 		<ul>
-			<li><a href ="index.html">HOME </a></li>
+			<li><a href="index.html">HOME </a></li>
 			<li class="active"><a href="about.html">ABOUT</a> </li>
 			<li><a href="#">VISION </a></li>
 			<li><a href="#">GALLERY</a> </li>
@@ -54,9 +50,10 @@
 			<li><a href="#">CONTACT US</a></li>
 		</ul>
 	</div>
+	
 	<div class="main-content">
-	<div style="background:url(images/IMG02.jpg);background-repeat:no-repeat;position:absolute;top:10%;left:0%;width:100vw;height:60%;background-position:20% 10%;" /></div>
-	<div style="top:62%;position:absolute;">
+	<div style="background:url(images/IMG02.jpg);background-repeat:no-repeat;/* position:absolute; *//* top:10%; */left:0%;width:100vw;height: 60vh;background-position:20% 10%;"></div>
+	<div style="/* top:62%; *//* position:absolute; */te; */">
 		<h1 style="margin-top:7%;">ABOUT US</h1>
 		<p class="a" style="border:none">Swachh Bharat Mission and Tata Trusts are recruiting passionate young professionals who are inspired and willing to contribute to nation building.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -67,8 +64,8 @@
 		 </p>
 	</div>
 	</div>
-	<div class = "footer" style="top:187%;">
-		<img src ="images/logo1.png"/><p>Designed at <span style="color:#b78832">Green Botal Studios</span></p>		
+	<div class="footer" style="/* top:187%; */">
+		<img src="images/logo1.png"><p>Designed at <span style="color:#b78832">Green Botal Studios</span></p>		
 	</div>
-</body>
-</html>
+
+</body></html>

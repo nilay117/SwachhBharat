@@ -45,6 +45,7 @@
 body{
 	overflow-x: hidden;
 	font-family: 'Roboto';
+	margin: 0%;
 }
 #first{
 	background:url("images/IMG02.jpg");
@@ -78,13 +79,13 @@ body{
 }
 .hamburger {
 	display: none;
-	position: fixed;
+	position: relative; 
 	top:1%;
 	z-index: 11;
-	right: 1%;
+	right: 4%;
 	width:5%;
 	min-width: 33px;
-	height: 8%;
+	height: 100%;
 	transition: all 0.3s;
 }
 .hamburger img{
@@ -95,20 +96,23 @@ body{
 	fill:red;
 }
 .nav{
-	position: fixed;
+	position: relative;
 	top:0%;
 	z-index: 6;
 	font-family: 'Roboto';
 	left: 0%;
-	height: 10%;
+	height: 10vh;
 	background-color: #eff0ec;
 	box-shadow: 0px 10px 0px rgba(167,167,165,0.3);
 	width:100vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .nav .logo-wrapper {
     display: flex;
-    height: 95%;
-    margin-bottom:5%; 
+    height: 100%;
+    /* margin-bottom:5%; */
     align-items: center;
 }
 .nav .logo{
@@ -126,7 +130,7 @@ body{
 	padding: 0%;
 	left:0%;
 	width: 100%;
-	height: 60%;
+	height: 100%;
 }
 .nav .head{
 	margin-left: 2%;
@@ -212,14 +216,14 @@ body{
 }
 .main-content{
 	font-family: 'Roboto';
-	position: absolute;
+	position: relative;
 	display: flex;
 	z-index: 3;
 	justify-content: center;
 	flex-direction: column;
 	top:0%;
 	left:0%;
-	height: 100%;
+	/*height: 100%;*/
 	width: 100vw;
 }
 .main-content .heading{
@@ -321,8 +325,8 @@ body{
 	width: 95%;
 }
 .footer{
-	position: absolute;
-	top: 90%;
+	/* position: absolute; */
+	/* top: 90%; */
 	left: 0%;
 	display: flex;
 	z-index: 5;

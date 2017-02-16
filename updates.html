@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Updates</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 <body>
 <script type="text/javascript">
-		$(document).ready(function(){
-			$(document).on('click',".hamburger.menu-closed",function(){
-				$(".mob-nav").animate({right:"0%"},1000);
-				// $(".mob-nav").fadeIn(1000);
-				$(this).removeClass('menu-closed').addClass('menu-open');	
+	$(document).ready(function(){
+			$(document).on('click',".hamburger",function(){
+				$(".mob-nav").animate({right:"0%"},1000);	
 			})
 
-			$(document).on('click',".hamburger.menu-open",function(){
+			$(document).on('click',".cross",function(){
 					$(".mob-nav").animate({right:"-45%"},1000);
-					// $(".mob-nav").fadeOut(1000);
-					$(this).removeClass('menu-open').addClass('menu-closed');
 			})
+		
 		})
 	</script>
-	<div class="hamburger menu-closed"><img src = "images/hamburger.png"></div>
+	
 	<div class="nav">
 	<div class="logo-wrapper">
-		<div class ="logo">
-			<a href="index.html"><img src="images/logo.png" /></a>
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png"></a>
 		</div>
-		<div class ="head"> <a href ="index.html">ZILA SWACHH BHARAT PRERAK </a></div>
+		<div class="head"> <a href="index.html">ZILA SWACHH BHARAT PRERAK </a></div>
+
 		<ul>
-			<li ><a href ="index.html">HOME </a></li>
-			<li ><a href="about.html">ABOUT</a> </li>
+			<li><a href="index.html">HOME </a></li>
+			<li><a href="about.html">ABOUT</a> </li>
 			<li><a href="#">VISION </a></li>
 			<li><a href="#">GALLERY</a> </li>
 			<li class="active"><a href="updates.html">UPDATES </a></li>
@@ -40,11 +38,14 @@
 			<li><a href="#">CONTACT US</a></li>
 		</ul>
 	</div>
+	<div class="hamburger"><img src="images/hamburger.png"></div>
 	</div>
-	<div class ="mob-nav">
+	<div class="mob-nav">
+	<img class ="cross" src="images/cross.svg" style="position:absolute;z-index:3;right:1%;top:1%;width:60px;height:60px " />
 		<ul>
-			<li><a href ="index.html">HOME </a></li>
-			<li ><a href="about.html">ABOUT</a> </li>
+			
+			<li><a href="index.html">HOME </a></li>
+			<li><a href="about.html">ABOUT</a> </li>
 			<li><a href="#">VISION </a></li>
 			<li><a href="#">GALLERY</a> </li>
 			<li class="active"><a href="updates.html">UPDATES </a></li>
@@ -53,47 +54,48 @@
 			<li><a href="#">CONTACT US</a></li>
 		</ul>
 	</div>
-	<div class="main-content">
-		<div style="background:url(images/IMG03.jpg);background-size:cover;background-repeat:no-repeat;position:absolute;top:10%;left:0%;width:100vw;height:60%;background-position:10%;" ></div>
-		<div style="position:absolute;top:70%;">
+	<div class="main-content" >
+		<div style="background:url(images/IMG03.jpg);margin-top:0%;background-size:cover;background-repeat:no-repeat;/* position:absolute; *//* top:10%; *//* left:0%; */width:100vw;height:60vh;background-position:10%;"></div>
+		<div style="/* position:absolute; *//* top:70%; */">
 		<h1 style="margin-top:5%;">UPDATES</h1>
 		<h2>LOREM IPSUM DOLOR SIT AMET</h2>
 		<div class="tagline">
-		<div class ="writer">By abcdef</div> 
+		<div class="writer">By abcdef</div> 
 		<div class="date">12/04/2014</div></div>
 		<p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
 
 		<h2>LOREM IPSUM DOLOR SIT AMET</h2>
 		<div class="tagline">
-		<div class ="writer">By abcdef</div> 
+		<div class="writer">By abcdef</div> 
 		<div class="date">11/05/2014</div></div>
 		<p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
 
 		<h2>LOREM IPSUM DOLOR SIT AMET</h2>
 		<div class="tagline">
-		<div class ="writer">By abcdef</div> 
+		<div class="writer">By abcdef</div> 
 		<div class="date">24/07/2014</div></div>
 		<p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
 
 		<h2>LOREM IPSUM DOLOR SIT AMET</h2>
 		<div class="tagline">
-		<div class ="writer">By abcdef</div> 
+		<div class="writer">By abcdef</div> 
 		<div class="date">18/02/2015</div></div>
 		<p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
 
 		<h2>LOREM IPSUM DOLOR SIT AMET</h2>
 		<div class="tagline">
-		<div class ="writer">By abcdef</div> 
+		<div class="writer">By abcdef</div> 
 		<div class="date">14/07/2015</div></div>
 		<p class="a" style="border:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
 	</div></div>
-	<div class = "footer" style="top:230%;">
-		<img src ="images/logo1.png"/><p>Designed at <span style="color:#b78832">Green Botal Studios</span></p>		
+	<div class="footer" style="/* top:230%; */">
+		<img src="images/logo1.png"><p>Designed at <span style="color:#b78832">Green Botal Studios</span></p>		
 	</div>
+
 </body>
 </html>
