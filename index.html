@@ -8,9 +8,11 @@
 </head>
 <body style="overflow:hidden;">
 	
-	<img src ="images/IMG02.jpg" id="first" style="z-index:2;position:absolute;top:5%;width:100vw;height:100%;left:0%;" />
+	<!--<img src ="images/IMG02.jpg" id="first" style="z-index:2;position:absolute;top:5%;width:100vw;height:100%;left:0%;" />
 
-	<img src ="images/IMG03.jpg" id="second" style="z-index:1;position:absolute;top:5%;width:100vw;height:100%;left:0%;" />
+	<img src ="images/IMG03.jpg" id="second" style="z-index:1;position:absolute;top:5%;width:100vw;height:100%;left:0%;" />-->
+	<div id = "first"></div>
+	<div id = "second" ></div>
 	<div class="hamburger menu-closed"><img src = "images/hamburger.png"></div>
 	<div class="nav">
 	<div class="logo-wrapper">
@@ -73,12 +75,12 @@
 		})
 		setInterval(function(){
 		$("#first").fadeOut(2000,function(){
-			$("#first").css({"z-index":1});
-			$("#second").css({"z-index":2}).delay(1000);
+			$("#first").css("z-index",1);
+			$("#second").css("z-index",2).delay(1000);
 			$("#first").fadeIn(10);			
 			$("#second").fadeOut(2000,function(){
-				$("#first").css({"z-index":2});
-				$("#second").css({"z-index":1}).delay(1000);
+				$("#first").css("z-index",2);
+				$("#second").css("z-index",1).delay(1000);
 				$("#second").fadeIn(10);
 			})
 		})

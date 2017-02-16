@@ -46,7 +46,28 @@ body{
 	overflow-x: hidden;
 	font-family: 'Roboto';
 }
-
+#first{
+	background:url("images/IMG02.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:10%;
+	left:0%;
+	z-index: 2;
+	width:100vw;
+	height:100%;
+}
+#second{
+	background:url("images/IMG03.jpg");
+	background-size: cover;
+	z-index: 1;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:10%;
+	left:0%;
+	width:100vw;
+	height:100%;
+}
 .sec{
 	padding: 2%;
 	width: 70%;
