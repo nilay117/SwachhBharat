@@ -375,6 +375,16 @@ input[type=text]{
 	margin-top: 20px;
 	width: 100%;
 }
+input[type=number]{
+	color:#272828;
+	font-size: 100%;
+	margin-top: 20px;
+	width: 100%;
+}
+input[type = number]:focus{
+	outline: none;
+	border-bottom: 2px solid #b78832;
+}
 textarea{
 	border:none;
 	font-size: 100%;

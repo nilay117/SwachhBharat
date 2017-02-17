@@ -4,8 +4,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Apply as a prerak</title>
 	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> 
+	<!--<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	--><script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 </head>
 <body >
 	<div class="wrapper" style="display:flex;align-items:center;flex-direction:column">
@@ -15,7 +16,7 @@
  	APPLY AS A PRERAK
  	</span>
 
- 	<form>
+ 	<form id="apply">
  	<div class="form1 form">
  		<div class="section" >
  			PERSONAL INFORMATION
@@ -28,16 +29,16 @@
  	
  		<!-- <label><span style="color:red">*</span></label> -->
 
- 		<input type="text" name="mobile" placeholder="Mobile Number" required><br>
- 	
+ 		<input type="number" name="mobile" placeholder="Mobile Number" size ="10" required><br>
+
  		<p>Date of Birth</p>
  		<input type="date" name="dob" placeholder="Your answer" required>
 
  		<p>Gender</p>
- 		<input type="radio" style="margin-bottom:1%" name="gender" value="male" checked><p style="display:inline;font-weight:300;"> Male<br></p>
-  		<input type="radio" style="margin-bottom:1%" name="gender" value="female"><p style="display:inline;font-weight:300;"> Female<br></p>
-  		<input type="radio" name="gender" value="other"><p style="display:inline;font-weight:300;"> Other: </p>
-  		<input type="text" name="gender_other" style="width:50%;"><br>
+ 		<input type="radio" style="margin-bottom:1%" name="gender" value="Male" checked><p style="display:inline;font-weight:300;"> Male<br></p>
+  		<input type="radio" style="margin-bottom:1%" name="gender" value="Female"><p style="display:inline;font-weight:300;"> Female<br></p>
+  		<!-- <input type="radio" name="gender" value="other"><p style="display:inline;font-weight:300;"> Other: </p>
+  		<input type="text" name="gender_other" style="width:50%;"><br> -->
 
   		<!-- <label><span style="color:red">*</span><br></label> -->
   		
@@ -69,35 +70,35 @@
 
  		<!-- <label> <span style="color:red">*</span><br></label> -->
   		<p>Please write the name of the latest organisation you worked with, along with the year of service (Example: Teach for India, 2010-12).Write NA if not applicable.</p>
- 		<input type="text" name="language" placeholder="Name of the Organisation" required><br>
+ 		<input type="text" name="org_name1" placeholder="Name of the Organisation" required><br>
 
  		<!-- <label> <span style="color:red">*</span><br></label> -->
   		<p>Please write your designation in the above organisation.Write NA if not applicable.</p>
- 		<input type="text" name="language" placeholder="Designation" required><br>
+ 		<input type="text" name="designation1" placeholder="Designation" required><br>
 
  		<!-- <label> <span style="color:red">*</span><br></label> -->
  		<p> Please write the number of months served in the above organisation.Write NA if not applicable.</p>
- 		<input type="text" name="language" placeholder="Number of months served" required><br></p>
+ 		<input type="number" name="num_months1" placeholder="Number of months served" required><br></p>
 
  		<!-- <label> <span style="color:red">*</span><br></label> -->
   		<p>Please describe in detail the work undertaken by you in the above role and organisation.Write NA if not applicable.</p>
-  		<textarea name="" placeholder="Work Description" required rows="10"></textarea><br>
+  		<textarea name="work_dec1" placeholder="Work Description" required rows="10"></textarea><br>
 
  		<!-- <label> <span style="color:red">*</span><br></label> -->
   		<p>Please write the name of the second organisation you worked with, along with the year of service (Example: Teach for India, 2010-12).Write NA if not applicable.</p>
- 		<input type="text" name="language" placeholder="Name of the Organisation(2)" required><br>
+ 		<input type="text" name="org_name2" placeholder="Name of the Organisation(2)" required><br>
 
  		<!-- <label> <span style="color:red">*</span><br></label> -->
   		<p>Please write your designation in the above organisation.Write NA if not applicable.</p>
- 		<input type="text" name="language" placeholder="Designation" required><br>
+ 		<input type="text" name="designation2" placeholder="Designation" required><br>
 
  		<!-- <label> <span style="color:red">*</span><br></label> -->
  		<p> Please write the number of months served in the above organisation.Write NA if not applicable.</p>
- 		<input type="text" name="language" placeholder="Number of months served" required><br>
+ 		<input type="number" name="num_months2" placeholder="Number of months served" required><br>
 
  		<!-- <label> <span style="color:red">*</span><br></label> -->
   		<p>Please describe in detail the work undertaken by you in the above role and organisation.Write NA if not applicable.</p>
- 		<textarea name="" placeholder="Work Description" required rows="10"></textarea><br>
+ 		<textarea name="work_dec2" placeholder="Work Description" required rows="10"></textarea><br>
  	</div>
  	<div class="form4 form">
  		<div class="section">
@@ -105,58 +106,58 @@
  		</div>
 		<label>Which of the following states are you keen to be a Swachh Bharat Fellow in? (States marked with ** are priority areas)<br></label>
 		<p>Current recruitment of Swachh Bharat Fellows is for the following states only. Recruitment for UTs will be done subsequently.</p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Uttar Pradesh**<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Odisha**<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Bihar**<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Rajasthan**<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Madhya Pradesh**<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Jharkhand**<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Arunachal Pradesh**<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Assam<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Chattisgarh<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Goa<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Haryana<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Jammu And Kashmir<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Karnataka<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Manipur<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Maharastra<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Meghalaya<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Punjab<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Tamil Nadu<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Telangana<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Tripura<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Uttarakhand<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">West Bengal<br>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Lakshadweep Islands<br></p>
-		<input type="radio" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Andhra Pradesh<br></p>
-		<input type="radio"  name="state_fellow"><p style="display:inline">Andaman & Nicobar Islands<br></p>
+		<input type="radio" value="Uttar Pradesh" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Uttar Pradesh**<br></p>
+		<input type="radio" value="Odisha" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Odisha**<br></p>
+		<input type="radio" value="Bihar" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Bihar**<br></p>
+		<input type="radio" value="Rajasthan" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Rajasthan**<br></p>
+		<input type="radio" value="Madhya Pradesh" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Madhya Pradesh**<br></p>
+		<input type="radio" value="Jharkhand" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Jharkhand**<br></p>
+		<input type="radio" value="Arunachal Pradesh" style="margin-bottom:1%;" name="state_fellow" checked=""><p style="display:inline">Arunachal Pradesh**<br></p>
+		<input type="radio" value="Assam" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Assam<br></p>
+		<input type="radio" value="Chattisgarh" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Chattisgarh<br></p>
+		<input type="radio" value="Goa" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Goa<br></p>
+		<input type="radio" value="Haryana" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Haryana<br></p>
+		<input type="radio" value="Jammu And Kashmir" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Jammu And Kashmir<br></p>
+		<input type="radio" value="Karnataka" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Karnataka<br></p>
+		<input type="radio" value="Manipur" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Manipur<br></p>
+		<input type="radio" value="Maharastra" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Maharastra<br></p>
+		<input type="radio" value="Meghalaya" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Meghalaya<br></p>
+		<input type="radio" value="Punjab" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Punjab<br></p>
+		<input type="radio" value="Tamil Nadu" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Tamil Nadu<br></p>
+		<input type="radio" value="Telangana" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Telangana<br></p>
+		<input type="radio" value="Tripura" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Tripura<br></p>
+		<input type="radio" value="Uttarakhand" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Uttarakhand<br></p>
+		<input type="radio" value="West Be" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">West Bengal<br>
+		<input type="radio" value="Lakshadweep Islands" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Lakshadweep Islands<br></p>
+		<input type="radio" value="Andhra Pradesh" style="margin-bottom:1%;" name="state_fellow"><p style="display:inline">Andhra Pradesh<br></p>
+		<input type="radio" value="Andaman & Nicobar Islands"  name="state_fellow"><p style="display:inline">Andaman & Nicobar Islands<br></p>
 
 		<label>Identify 4 challenges that the state of your preference faces in the effective implementation of Swachh Bharat Mission  <br></label>
  		<p> Please identify and clearly articulate 4 challenges that the state of your preference faces in the effective implementation of Swachh Bharat Mission. Please be concise and relevant in your responses.</p>
- 		<textarea name="" placeholder="Your answer" required rows="10"></textarea><br>
+ 		<textarea name="challenges" placeholder="Your answer" required rows="10"></textarea><br>
 
  		<label>Recommend 4 clear actionable solutions that the state of your preference can adopt for the effective implementation of Swachh Bharat Mission  <br></label>
  		<p> Please identify and clearly articulate 4 actionable solutions that the state of your preference faces in the effective implementation of Swachh Bharat Mission. Please be concise and relevant in your responses.</p>
- 		<textarea name="" placeholder="Your Answer" required rows="10"></textarea><br>
+ 		<textarea name="solutions" placeholder="Your Answer" required rows="10"></textarea><br>
  	</div>
  	<div class="form5 form">
  		<div class="section">
  			DECLARATIONS
  		</div>
 
- 		<input type="checkbox" name="" style="margin-bottom:0%;">
+ 		<input type="checkbox" name="join_fellow" style="margin-bottom:0%;" required >
  		<p style="display:inline">I understand that if selected, I will be required to join the Swachh Bharat Fellowship within one month of the offer letter.<br><br><br></p>
 
- 		<input type="checkbox" name="" style="margin-bottom:0%;">
+ 		<input type="checkbox" name="move_state" style="margin-bottom:0%;" required>
  		<p style="display:inline">I understand that once selected for the Swachh Bharat Fellowship, I will be required to move to the state and district alloted to me and undertake the fellowship as a residential fellowship for 12 months <br><br><br></p>
 
- 		<input type="checkbox" name="" style="margin-bottom:0%;">
+ 		<input type="checkbox" name="complete_tenure" style="margin-bottom:0%;" required >
  		<p style="display:inline">I understand that once selected for the Swachh Bharat Fellowship, I am expected to complete the full tenure of 12 months at the allotted district and failure to do so will result in non-issuance of any certificate from the employer<span style="color:red;">*</span><br><br><br></p>
 
- 		<input type="checkbox" name="" style="margin-bottom:0%;">
+ 		<input type="checkbox" name="correct_info" style="margin-bottom:0%;" required>
  		<p style="display:inline">The above information in the application form is correct and to the best of my knowledge.<span style="color:red;">*</span><br><br><br></p>
  		<div style="display:flex;justify-content:center;height:100%;width:100%">
- 		<input type="submit" name="" value="SUMBIT" style="font-size:100%;padding:10px;margin-bottom:0%;cursor:pointer;border:none;border:2px solid #b78832;height:10%;padding-left:60px;padding-right:60px">
+ 		<button id="form-submit" style="background:none;font-size:100%;padding:10px;margin-bottom:0%;cursor:pointer;border:none;border:2px solid #b78832;height:10%;padding-left:60px;padding-right:60px">SUBMIT</button>
  		</div>
  		</div>
  	</form>
@@ -171,6 +172,8 @@
 	 </div>
  	</div>
  	<script type="text/javascript"> 
+ 	var baseUrl ="http://172.17.45.40:8000";
+ 	var data={};
  	 	$(".form").hide();
  	 	var x = 1;
  	 	var form = ".form" + x;
@@ -205,7 +208,67 @@
 			form = ".form" + x;
 			$(form).show();
 		})
-	</script>
+
+
+		function testValue(data){
+			var valid=true;
+			for(key in data){
+				console.log(key)
+			
+			if(key=="mobile"){
+				
+				valid = data[key].length==10;
+			}
+			if(key=="join_fellow"){
+				valid =  data[key];
+			}
+			if(key=="move_state"){
+				valid= data[key];
+			}
+			if(key=="complete_tenure"){
+				valid = data[key];
+			}
+			if(key=="correct_info"){
+				valid =  data[key];
+			}
+			if(valid == false)
+				return false;
+		};
+			return true;
+		}
+
+		var data = {};
+		$('#form-submit').click(function(ev){
+			ev.preventDefault();
+			var a = $("#apply").serializeArray();
+			var isEmpty=false;
+			var valid=false;
+			$.each(a,function(i,key){
+				if(key.value == '')
+					isEmpty=true;
+				data[key.name]=key.value;
+			});
+			$.each($('input[type="checkbox"]'),function(i,ele){
+				name=$(ele).attr('name');
+				val=ele.checked;
+				data[name]=val;
+			});
+			if(!isEmpty&&testValue(data))
+			$.ajax({
+				method: "POST",
+				url: baseUrl+"/apply/",
+				data:data,
+				success:function(response){
+				},
+				error:function(resp,xhr,_){
+				}
+			})
+			else if(!testValue(data))
+				alert('Some Fields are not valid');
+			else
+				alert('Some Fields are not valid');
+		});
+	</script>	
 
 </body>
 </html>
