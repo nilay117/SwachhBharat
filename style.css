@@ -51,7 +51,7 @@ body{
 	margin: 0%;
 }
 #first{
-	background:url("images/IMG02.jpg");
+	background:url("images/IMG01.jpg");
 	background-size: cover;
 	background-repeat:no-repeat;
 	position:absolute;
@@ -62,7 +62,7 @@ body{
 	height:100%;
 }
 #second{
-	background:url("images/IMG03.jpg");
+	background:url("images/IMG04.jpg");
 	background-size: cover;
 	z-index: 1;
 	background-repeat:no-repeat;
@@ -119,8 +119,7 @@ body{
     align-items: center;
 }
 .nav .logo{
-	width: 3%;
-	min-width: 35px;
+	width: 80px;
 	margin-right:1px; 
 	height: auto;
 	top:0%;
@@ -138,6 +137,7 @@ body{
 .nav .head{
 	margin-left: 2%;
 	font-size: 120%;
+	width: 100%;
 	font-weight: bold;
 	font-family: 'Roboto'; 
 	color: #b78832;
@@ -146,7 +146,8 @@ body{
 	position: absolute;
 	top: 0%;
 	right: 0%;
-	width: 50%;
+	width: 40%;
+	white-space: nowrap;
 	margin: 0%;
 	height: inherit;
 	display: flex;
