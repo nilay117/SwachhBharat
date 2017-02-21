@@ -7,19 +7,7 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 <body>
-<script type="text/javascript">
-	$(document).ready(function(){
-			$(document).on('click',".hamburger",function(){
-				$(".mob-nav").animate({right:"0%"},1000);	
-			})
 
-			$(document).on('click',".cross",function(){
-					$(".mob-nav").animate({right:"-45%"},1000);
-			})
-		
-		})
-	</script>
-	
 	<div class="nav">
 	<div class="logo-wrapper">
 		<div class="logo">
@@ -35,7 +23,7 @@
 			<li class="active"><a href="updates.html">UPDATES </a></li>
 			<li><a href="#">MENTORS </a></li>
 			<li><a href="#">PRERAKS </a></li>
-			<li><a href="#">CONTACT US</a></li>
+			<li><a href="contact.html">CONTACT US</a></li>
 		</ul>
 	</div>
 	<div class="hamburger"><img src="images/hamburger.png"></div>
@@ -51,7 +39,7 @@
 			<li class="active"><a href="updates.html">UPDATES </a></li>
 			<li><a href="#">MENTORS </a></li>
 			<li><a href="#">PRERAKS </a></li>
-			<li><a href="#">CONTACT US</a></li>
+			<li><a href="contact.html">CONTACT US</a></li>
 		</ul>
 	</div>
 	<div class="main-content" >
@@ -90,12 +78,34 @@
 		<div class="tagline">
 		<div class="writer">By abcdef</div> 
 		<div class="date">14/07/2015</div></div>
+		<p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+
+		<h2>LOREM IPSUM DOLOR SIT AMET</h2>
+		<div class="tagline">
+		<div class="writer">By abcdef</div> 
+		<div class="date">14/07/2015</div></div>
 		<p class="a" style="border:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-	</div></div>
-	<div class="footer" style="/* top:230%; */">
-		<img src="images/logo1.png"><p>Designed at <span style="color:#b78832">Green Botal Studios</span></p>		
-	</div>
 
+		</div>
+	</div>
+	<div class="footer">
+		<img src="images/logo1.png"><p>Designed at <span style="color:#b78832">Green Botal Studios</span></p>	
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+			$(document).on('click',".hamburger",function(){
+				$(".mob-nav").animate({right:"0%"},1000);	
+			})
+
+			$(document).on('click',".cross",function(){
+					$(".mob-nav").animate({right:"-45%"},1000);
+			})
+		}); 
+
+	
+	</script>
+	
 </body>
 </html>

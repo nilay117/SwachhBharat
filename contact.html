@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us|Zila Swach Bharat Prerak</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<div class="nav">
+	<div class="logo-wrapper">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png"></a>
+		</div>
+		<div class="head"> <a href="index.html">ZILA SWACHH BHARAT PRERAK </a></div>
+		<ul>
+			<li><a href="index.html">HOME </a></li>
+			<li><a href="about.html">ABOUT</a> </li>
+			<li><a href="#">VISION </a></li>
+			<li><a href="#">GALLERY</a> </li>
+			<li><a href="updates.html">UPDATES </a></li>
+			<li><a href="#">MENTORS </a></li>
+			<li><a href="#">PRERAKS </a></li>
+			<li class="active"><a href="contact.html">CONTACT US</a></li>
+		</ul>
+	</div>	
+	<div class="hamburger"><img src="images/hamburger.png"></div></div>
+	<div class="mob-nav">
+		<img class ="cross" src="images/cross.svg" style="position:absolute;z-index:3;right:1%;top:1%;width:60px;height:60px " />
+		<ul>
+			<li><a href="index.html">HOME </a></li>
+			<li><a href="about.html">ABOUT</a> </li>
+			<li><a href="#">VISION </a></li>
+			<li><a href="#">GALLERY</a> </li>
+			<li><a href="updates.html">UPDATES </a></li>
+			<li><a href="#">MENTORS </a></li>
+			<li><a href="#">PRERAKS </a></li>
+			<li  class="active"><a href="contact.html">CONTACT US</a></li>
+		</ul>
+	</div>
+	
+	<div class="main-content">
+	<div style="background:url(images/IMG02.jpg);background-repeat:no-repeat;/* position:absolute; *//* top:10%; */left:0%;width:100vw;height: 60vh;background-position:20% 10%;"></div>
+	<div>
+		<h1 style="margin-top:7%;">CONTACT US</h1>
+		<form id="contact" >
+			<input type="text" name="name" placeholder="Name">
+			<input type="text" name="email" placeholder="Email ID">
+			<textarea rows="10" name="message" placeholder="Write us a message!"></textarea>
+		</form>
+		<div style="width:54%;display:flex;margin-left: 10%;margin-top:-2%;margin-bottom: 3%;height:auto;">
+		<div class="next" id="contact-button" style="margin-left:0%;width:auto;font-size: 140%;font-weight: 300;padding: 0.7%;padding-left: 1.2%;padding-right: 1.2%;">SEND</div></div>
+	</div>
+	</div>
+	<div class="footer" style="/* top:187%; */">
+		<img src="images/logo1.png"><p>Designed at <span style="color:#b78832">Green Botal Studios</span></p>
+	</div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('click',".hamburger",function(){
+				$(".mob-nav").animate({right:"0%"},1000);
+			})
+
+			$(document).on('click',".cross",function(){
+					$(".mob-nav").animate({right:"-45%"},1000);
+			})
+		});
+		var data = {};
+		var baseUrl = "";
+		$('#contact-button').click(function(ev){
+			ev.preventDefault();
+			var a = $("#contact").serializeArray();
+			var isEmpty = false;
+			$.each(a,function(i,key){
+				if(key.value == '')
+					isEmpty=true;
+				data[key.name]=key.value;
+			});
+
+			if(!isEmpty){
+				$.ajax({
+					method: "POST",
+					url: baseUrl + "/",
+					data:data,
+					success:function(response){
+					},
+					error:function(resp,xhr,_){
+					}
+				});
+			}
+			else
+				alert('All the fields are required');
+		});
+	</script>
+</body>
+</html>
