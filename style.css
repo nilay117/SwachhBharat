@@ -50,6 +50,16 @@ body{
 	font-family: 'Roboto';
 	margin: 0%;
 }
+#photoShow div {
+    position:absolute;
+    z-index: 0;
+}
+#photoShow div.previous {
+    z-index: 1;
+}
+#photoShow div.current {
+    z-index: 2;
+}
 #first{
 	background:url("images/IMG01.jpg");
 	background-size: cover;
@@ -63,6 +73,39 @@ body{
 }
 #second{
 	background:url("images/IMG04.jpg");
+	background-size: cover;
+	z-index: 1;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:10%;
+	left:0%;
+	width:100vw;
+	height:100%;
+}
+#third{
+	background:url("images/IMG02.jpg");
+	background-size: cover;
+	z-index: 1;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:10%;
+	left:0%;
+	width:100vw;
+	height:100%;
+}
+#fourth{
+	background:url("images/IMG03.jpg");
+	background-size: cover;
+	z-index: 1;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:10%;
+	left:0%;
+	width:100vw;
+	height:100%;
+}
+#fifth{
+	background:url("images/IMG05.jpg");
 	background-size: cover;
 	z-index: 1;
 	background-repeat:no-repeat;
@@ -115,13 +158,15 @@ body{
 .nav .logo-wrapper {
     display: flex;
     height: 100%;
+    margin-left: 4px;
     /* margin-bottom:5%; */
     align-items: center;
 }
 .nav .logo{
-	width: 80px;
-	margin-right:1px; 
-	height: auto;
+	width: 52.5px;
+	/* margin-right: 80px; */
+	margin-left: 20px;
+	height: 56px;
 	top:0%;
 	padding: 0%;
 	margin:0%;
@@ -135,11 +180,12 @@ body{
 	height: 100%;
 }
 .nav .head{
-	margin-left: 2%;
+	margin-left: 3%;
 	font-size: 120%;
+	white-space: nowrap;
 	width: 100%;
 	font-weight: bold;
-	font-family: 'Roboto'; 
+	font-family: 'Roboto';
 	color: #b78832;
 }
 .nav ul{
@@ -222,7 +268,7 @@ body{
 	font-family: 'Roboto';
 	position: relative;
 	display: flex;
-	z-index: 3;
+	z-index: 6;
 	justify-content: center;
 	flex-direction: column;
 	top:0%;

@@ -10,9 +10,13 @@
 	<!--<img src ="images/IMG02.jpg" id="first" style="z-index:2;position:absolute;top:5%;width:100vw;height:100%;left:0%;" />
 
 	<img src ="images/IMG03.jpg" id="second" style="z-index:1;position:absolute;top:5%;width:100vw;height:100%;left:0%;" />-->
-	<div id="first" style="z-index: 1;height:80vh;"></div>
-	<div id="second" style="z-index: 2;height:80vh;"></div>
-	
+	<div id ="photoShow">
+	<div id="first" class = "current" style="height:80vh;"></div>
+	<div id="second"  style="height:80vh;"></div>
+	<div id="third"  style="height:80vh;"></div>
+	<div id="fourth"  style="height:80vh;"></div>
+	<div id="fifth"  style="height:80vh;"></div>
+	</div>
 	<div class="nav">
 	<div class="logo-wrapper">
 		<div class="logo">
@@ -68,18 +72,23 @@
 			})
 		
 		})
-		setInterval(function(){
-		$("#first").fadeOut(2000,function(){
-			$("#first").css("z-index",1);
-			$("#second").css("z-index",2).delay(1000);
-			$("#first").fadeIn(10);			
-			$("#second").fadeOut(2000,function(){
-				$("#first").css("z-index",2);
-				$("#second").css("z-index",1).delay(1000);
-				$("#second").fadeIn(10);
-			})
-		})
-		},6000);
+		$(function() {
+            // create the image rotator
+            setInterval("rotateImages()", 2000);
+        });
+
+        function rotateImages() {
+            var oCurPhoto = $('#photoShow div.current');
+            var oNxtPhoto = oCurPhoto.next();
+            if (oNxtPhoto.length == 0)
+                oNxtPhoto = $('#photoShow div:first');
+
+            oCurPhoto.removeClass('current').addClass('previous');
+            oNxtPhoto.css({ opacity: 0.0 }).addClass('current').animate({ opacity: 1.0 }, 1000,
+                function() {
+                    oCurPhoto.removeClass('previous');
+                });
+        }
 	</script>
 
 </body></html>
