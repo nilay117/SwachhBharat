@@ -559,13 +559,13 @@ form p{
 	flex-direction: column;
 }
 .links a{
-	
-	color: #222222;
+	text-decoration: none;
+	color: #b78832;
 	font-size: 150%;
 	margin-bottom: 1%;
 }
 .links a:hover{
-	color:#b78832; 
+	text-decoration: underline;
 }
 @media screen and (
 	max-width : 1200px) {
