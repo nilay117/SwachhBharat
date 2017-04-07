@@ -649,3 +649,63 @@ form p{
 .app a:hover{
 		box-shadow: 1px 1px 5px #000000;
 }
+.res-content{
+	margin-left: 10%;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.res-content ul{
+	width: 40%;
+	display: flex;
+	list-style-type: none;
+	justify-content: space-between;
+	font-family: 'Roboto';
+}
+.res-content li{
+	cursor: pointer;
+	padding:2px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.res-content li:hover{
+	color: #b78832;
+}
+.act{
+	border:3px solid #b78832;
+}
+.w{
+	width: 100%;
+	margin-top: 2%;
+	margin-bottom: 3%;
+	display: flex;
+	flex-direction: column;
+}
+.w ul{
+	width: 100%;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	list-style-type: none;
+}
+.w li{	
+	margin-bottom: 2%;
+	margin-right: 2%;
+	width: 200px;
+	height: 160px;
+	border: 1px solid #555555;
+}
+.cat{
+	width: 100%;
+	padding-bottom: 10px;
+	text-align: left;
+	font-weight: 300;
+	color: #555555;
+	font-family: 'Roboto';
+	border-bottom: 1px solid #555555;
+}

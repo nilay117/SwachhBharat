@@ -1,0 +1,174 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SwachhBharat</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('click',".hamburger",function(){
+				$(".mob-nav").animate({right:"0%"},1000);
+			})
+
+			$(document).on('click',".cross",function(){
+					$(".mob-nav").animate({right:"-45%"},1000);
+			})
+
+		})
+	</script>
+	
+	<div class="nav">
+	<div class="logo-wrapper">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png"></a>
+		</div>
+		<div class="head"> <a href="index.html">ZILA SWACHH BHARAT PRERAK </a></div>
+		<ul>
+			<li><a href="index.html">HOME </a></li>
+			<li ><a href="about.html">ABOUT</a> </li>
+			<li><a href="vision.html">VISION </a></li>
+			<li class="active"><a href="resources.html">RESOURCES</a> </li>
+			<!--<li><a href="updates.html">UPDATES </a></li>-->
+			<!-- <li><a href="#">MENTORS </a></li> -->
+			<li><a href="preapply.html">PRERAKS </a></li>
+			<li><a href="contact.html">CONTACT US</a></li>
+		</ul>
+	</div>	
+	<div class="hamburger"><img src="images/hamburger.png"></div></div>
+	<div class="mob-nav">
+		<img class ="cross" src="images/cross.svg" style="position:absolute;z-index:3;right:1%;top:1%;width:60px;height:60px " />
+		<ul>
+			<li><a href="index.html">HOME </a></li>
+			<li ><a href="about.html">ABOUT</a> </li>
+			<li><a href="vision.html">VISION </a></li>
+			<li class="active"><a href="resources.html">RESOURCES</a> </li>
+			<!--<li><a href="updates.html">UPDATES </a></li>-->
+			<li><a href="preapply.html">PRERAKS </a></li>
+			<li><a href="contact.html">CONTACT US</a></li>
+		</ul>
+	</div>
+	
+	<div class="res-content">
+		<ul>
+			<li name="res-vid" class="res act">VIDEOS</li>
+			<li name="res-aud" class="res">AUDIO</li>
+			<li name="res-img" class="res">IMAGES</li>
+			<li name="res-doc" class="res">DOCUMENT</li>
+		</ul>
+		<div id="res-vid" class= "ress w" >
+			<div class="cat">CATEGORY 1</div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="cat">CATEGORY 2</div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<div id="res-aud" class="w" style="display:none">
+			<div class="cat">CATEGORY 1</div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="cat">CATEGORY 2</div>
+			<ul>
+				<li></li>
+				<li></li>
+				
+			</ul>
+		</div>
+
+		<div id="res-img" class="w" style="display:none">
+			<div class="cat">CATEGORY 1</div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="cat">CATEGORY 2</div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				
+			</ul>
+		</div>
+
+		<div id="res-doc" class="w" style="display:none">
+			<div class="cat">CATEGORY 1</div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				
+			</ul>
+			<div class="cat">CATEGORY 2</div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer" style="/* top:187%; */">
+		<p style="display:flex;align-items:center;"><span style="font-size:120%;white-space:nowrap;margin-left:2%;">In association with Ministry of Drinking Water and Sanitation</span></p>	
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.res').click(function(){
+				$('.act').removeClass('act');
+				$(this).addClass('act');
+				var a = $(this).attr('name');
+				$('.ress').hide().removeClass('ress');
+				$('#' + a).show().addClass('ress');			
+			})
+		})
+	</script>
+</body></html>
