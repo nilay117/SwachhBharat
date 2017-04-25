@@ -18,7 +18,14 @@
 
 		})
 	</script>
-	
+
+	<div class="container">
+		<div class="box">
+			<iframe  frameborder="0" allowfullscreen></iframe>
+		</div>
+		<img class="cross" src="images/cross.png" />
+	</div>
+
 	<div class="nav">
 	<div class="logo-wrapper">
 		<div class="logo">
@@ -29,10 +36,11 @@
 			<li><a href="index.html">HOME </a></li>
 			<li ><a href="about.html">ABOUT</a> </li>
 			<li><a href="vision.html">VISION </a></li>
-			<li class="active"><a href="resources.html">RESOURCES</a> </li>
+			<li class="active"><a href="#">RESOURCES</a> </li>
 			<!--<li><a href="updates.html">UPDATES </a></li>-->
 			<!-- <li><a href="#">MENTORS </a></li> -->
-			<li><a href="preapply.html">PRERAKS </a></li>
+			<!-- <li><a href="preapply.html">PRERAKS </a></li> -->
+			<li><a href="https://sites.google.com/view/microsite-zsbp">MICRO SITE</a></li>
 			<li><a href="contact.html">CONTACT US</a></li>
 		</ul>
 	</div>	
@@ -43,24 +51,25 @@
 			<li><a href="index.html">HOME </a></li>
 			<li ><a href="about.html">ABOUT</a> </li>
 			<li><a href="vision.html">VISION </a></li>
-			<li class="active"><a href="resources.html">RESOURCES</a> </li>
+			<li class="active"><a href="#">RESOURCES</a> </li>
 			<!--<li><a href="updates.html">UPDATES </a></li>-->
-			<li><a href="preapply.html">PRERAKS </a></li>
+			<!-- <li><a href="preapply.html">PRERAKS </a></li> -->
+			<li><a href="https://sites.google.com/view/microsite-zsbp">MICRO SITE</a></li>
 			<li><a href="contact.html">CONTACT US</a></li>
 		</ul>
 	</div>
 	
 	<div class="res-content">
 		<ul>
-			<li name="res-vid" class="res act">VIDEOS</li>
+			<li name="res-vid" class="res act">VIDEO</li>
 			<li name="res-aud" class="res">AUDIO</li>
-			<li name="res-img" class="res">IMAGES</li>
+			<li name="res-img" class="res">IMAGE</li>
 			<li name="res-doc" class="res">DOCUMENT</li>
 		</ul>
 		<div id="res-vid" class= "ress w" >
 			<div class="cat">CATEGORY 1</div>
 			<ul>
-				<li></li>
+				<li data-url="https://www.youtube.com/embed/hFK-lLhWXQk"><img src="images/vid1.jpg" /></li>
 				<li></li>
 				<li></li>
 				<li></li>
@@ -107,31 +116,12 @@
 		</div>
 
 		<div id="res-img" class="w" style="display:none">
-			<div class="cat">CATEGORY 1</div>
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
+			<div class="cat" >CATEGORY 1</div>
+			<ul data-cat="1">
+				
 			</ul>
-			<div class="cat">CATEGORY 2</div>
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
+			<div class="cat" >CATEGORY 2</div>
+			<ul data-cat="2">
 				
 			</ul>
 		</div>
@@ -161,6 +151,22 @@
 		<p style="display:flex;align-items:center;"><span style="font-size:120%;white-space:nowrap;margin-left:2%;">In association with Ministry of Drinking Water and Sanitation</span></p>	
 	</div>
 	<script type="text/javascript">
+
+		var videoList = [
+			{
+				cat:1,
+				id:'22',
+				src:'https://www.youtube.com/embed/hFK-lLhWXQk'
+			},{
+				cat:2,
+				id:'23',
+				src:'https://www.youtube.com/embed/hFK-lLhWXQk'
+			},{
+				cat:1,
+				id:'25',
+				src:'https://www.youtube.com/embed/hFK-lLhWXQk'
+			}
+		];
 		$(document).ready(function(){
 			$('.res').click(function(){
 				$('.act').removeClass('act');
@@ -168,6 +174,25 @@
 				var a = $(this).attr('name');
 				$('.ress').hide().removeClass('ress');
 				$('#' + a).show().addClass('ress');			
+			})
+
+			//ajax
+
+			$.each(videoList,function(i,key){
+				console.log(parseInt(key.cat),key.src);
+				$('#res-img ul[data-cat=' + key.cat + ']').append("<li data-url="+ key.src +"></li>")
+
+			})
+			$('.w li').click(function(){
+				var url = $(this).attr("data-url");
+				$('iframe').attr("src",url);
+				$('.container').show();
+			});
+			$('.cross').click(function(){
+				$('.container').hide();
+			});
+			$('.container').click(function(){
+				$('.container').hide();
 			})
 		})
 	</script>

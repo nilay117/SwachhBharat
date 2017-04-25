@@ -696,9 +696,15 @@ form p{
 .w li{	
 	margin-bottom: 2%;
 	margin-right: 2%;
+	padding: 0;
 	width: 200px;
 	height: 160px;
 	border: 1px solid #555555;
+}
+.w li img{
+	padding: 1%;
+	width: 98%;
+	height: 98%;
 }
 .cat{
 	width: 100%;
@@ -708,4 +714,110 @@ form p{
 	color: #555555;
 	font-family: 'Roboto';
 	border-bottom: 1px solid #555555;
+}
+.container{
+	display: none;
+	width:100%;
+	height: 100%;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.8);
+}
+.container img{
+	position: absolute;
+	top: 2%;
+	padding: 5px; 
+	right: 10%;
+	width: 30px;
+	cursor: pointer;
+	height: 30px;
+}
+.container .box{
+	box-shadow: 10px 10px 15px #000;
+	width: 70%;
+	height: 90%;
+	position: absolute;
+	top: 5%;
+	left: 15%;
+}
+.container .box iframe{
+	width: 100%;
+	height: 100%;
+}
+
+.card{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 90vh;
+	width: 100vw;
+
+}
+.card-content{
+	width: 30%;
+	height: 40%;
+	background-color: #777;
+	border:1px solid black;
+	margin:1.5%;
+}
+
+  .body-sub{z-index: 1000;
+  	position: fixed;
+  	top:0px;
+
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+   display: none;
+  }
+	div.sub{padding: 10px;
+	width: 90vw;
+height: 95vh;
+margin: auto !important;
+padding: auto;
+
+border-radius: 3px;
+}
+iframe{
+  border-radius: 3px;
+  position: relative;
+width: 100%;
+height: 100%;
+}
+.artistcard{
+	display: flex;
+	flex-direction: column;
+}
+.artistimage{
+	height: 280px;
+	width: 250px;
+	min-width: 200px;
+}
+.artistimage img{
+background-image: url("../../Images/main_bg.jpg");
+height: 100%;
+width: 100%;
+}
+.artistinfo{padding: 0px;
+	margin: auto;
+display: flex;
+justify-content: center;
+}
+.artistinfo p{padding: auto;
+
+	color:black;
+	display: flex;
+	margin:auto;
+	justify-content: center;
+	text-align: center;
+}
+
+.playpause {z-index: 1000;
+	display: none;
+    background-repeat:no-repeat;
+    position:absolute;
+    height: 100%;
+    width: 100%;
 }
